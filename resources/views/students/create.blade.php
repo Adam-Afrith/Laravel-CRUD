@@ -12,7 +12,8 @@
             </ul>
         </div>
     @endif
-    <form action="{{ route('students.store') }}" method="POST">
+    <form action="{{ route('students.store') }}" method="POST">  
+        <!--students.store means it's going to controller store func() and return navigate to view---->
         @csrf
         <div>
             <label>Name:</label>
@@ -26,6 +27,7 @@
             <label>Phone:</label>
             <input type="text" name="phone" value="{{ old('phone') }}" class="form-control">
         </div>
+        <br>
         <div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>

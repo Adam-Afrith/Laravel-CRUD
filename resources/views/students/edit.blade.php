@@ -27,6 +27,7 @@
             <label>Phone:</label>
             <input type="text" name="phone" value="{{ $student->phone }}" class="form-control">
         </div>
+        <br>
         <div>
             <button type="submit" class="btn btn-primary">Update</button>
         </div>

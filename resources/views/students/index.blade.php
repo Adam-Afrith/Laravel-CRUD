@@ -2,13 +2,14 @@
 
 @section('content')
 <h1>Students</h1>
-    <a href="{{ route('students.create') }}" class="btn btn-primary">Create New Student</a>
+    <a href="{{ route('students.create') }}" class="btn btn-primary">Create New Student</a><br><br>
     @if ($message = Session::get('success'))
         <div>{{ $message }}</div>
     @endif
-    <table>
+    <table class="table table-bordered">
         <thead>
             <tr>
+                <th>S.No</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone</th>
@@ -18,6 +19,7 @@
         <tbody>
             @foreach ($students as $student)
                 <tr>
+                    <td>{{ $loop->iteration }}</td>
                     <td>{{ $student->name }}</td>
                     <td>{{ $student->email }}</td>
                     <td>{{ $student->phone }}</td>
